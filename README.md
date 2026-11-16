@@ -1,29 +1,27 @@
 # Google ADK – AI Agent Development
 
-\<p align="center">
-&#x20; \<strong>Building Intelligent AI Agents with Python and Google's Agent Development Kit\</strong>
-\</p>
+### Building Intelligent AI Agents with Python and Google's Agent Development Kit
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/Framework-Google%20ADK-4285F4?logo=google&logoColor=white](https://img.shields.io/badge/Framework-Google%20ADK-4285F4?logo=google\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/LLM-Gemini-8E75B2?logo=google&logoColor=white](https://img.shields.io/badge/LLM-Gemini-8E75B2?logo=google\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/Status-Active-success](https://img.shields.io/badge/Status-Active-success)" />
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Framework-Google%20ADK-4285F4?logo=google&logoColor=white" alt="Google ADK">
+  <img src="https://img.shields.io/badge/LLM-Gemini-8E75B2?logo=google&logoColor=white" alt="Gemini">
+  <img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
+</p>
 
 ---
 
-## Overview
+## 📌 Overview
 
 Welcome to my **Google ADK – AI Agent Development** repository.
 
 This repository is dedicated to exploring and building AI agents using Google's Agent Development Kit (ADK), an open-source framework designed to simplify the development, orchestration, and deployment of intelligent agents.
 
-The main objective of this project is to gain practical experience in Agentic AI by building applications that leverage Large Language Models (LLMs), tools, and structured agent workflows.
+The main objective is to gain practical experience in **Agentic AI** by building applications that leverage Large Language Models (LLMs), tools, and structured agent workflows.
 
 Rather than focusing only on theoretical concepts, this repository emphasizes hands-on implementation, experimentation, and understanding how AI agents work internally.
 
-## Projects
+## 🚀 Projects
 
 This repository contains multiple practical implementations using Google ADK.
 
@@ -43,7 +41,7 @@ An implementation focused on exploring file-search functionality and AI-powered 
 
 ---
 
-## What is Google ADK?
+## 🤖 What is Google ADK?
 
 Google Agent Development Kit (ADK) is an open-source, code-first framework for building AI agents.
 
@@ -64,20 +62,20 @@ It provides developers with the ability to:
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
-| Technology       | Purpose                        |
-| ---------------- | ------------------------------ |
-| Python           | Primary programming language   |
-| Google ADK       | AI agent development framework |
-| Gemini           | Large Language Model           |
-| Google AI Studio | API key and model access       |
-| VS Code          | Development environment        |
-| Git & GitHub     | Version control                |
+| Technology | Purpose |
+|---|---|
+| Python | Primary programming language |
+| Google ADK | AI agent development framework |
+| Gemini | Large Language Model |
+| Google AI Studio | API key and model access |
+| VS Code | Development environment |
+| Git & GitHub | Version control |
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 The following diagram illustrates a general execution flow of an LLM-powered AI agent.
 
@@ -97,13 +95,11 @@ flowchart TD
 
 ---
 
-## Getting Started
+## 💻 Getting Started
 
 Follow these instructions to set up the project locally.
 
 ### Prerequisites
-
-Make sure you have the following installed:
 
 - Python 3.10 or later (compatible with your Google ADK version).
 - Git.
@@ -128,7 +124,7 @@ cd Google-adk
 python -m venv .venv
 ```
 
-### 4. Activate the Virtual Environment
+### 4. Activate the Environment
 
 **Windows PowerShell:**
 
@@ -159,13 +155,9 @@ GOOGLE_GENAI_USE_VERTEXAI=FALSE
 GOOGLE_API_KEY=your_google_api_key
 ```
 
-Get your API key from:
+Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
 
-[Google AI Studio](https://aistudio.google.com/apikey)
-
-**Security Note:**
-
-Never upload your `.env` file, API keys, credentials, or other sensitive information to GitHub.
+> **Security:** Never upload your `.env` file, API keys, credentials, or other sensitive information to GitHub.
 
 ### 7. Run the Agent
 
@@ -187,7 +179,7 @@ Replace `<agent_folder_name>` with the actual name of your agent package.
 
 ---
 
-## Key Learning Areas
+## 🧠 Key Learning Areas
 
 This repository focuses on exploring the following concepts:
 
@@ -202,9 +194,7 @@ This repository focuses on exploring the following concepts:
 
 ---
 
-## Future Roadmap
-
-The following are areas I plan to explore and implement:
+## 🗺️ Future Roadmap
 
 - [ ] Develop more advanced AI agents.
 - [ ] Integrate custom tools and external APIs.
@@ -216,9 +206,7 @@ The following are areas I plan to explore and implement:
 
 ---
 
-## Learning Resources
-
-Here are some useful resources for learning and developing with Google ADK:
+## 📚 Learning Resources
 
 - [Google ADK Official Documentation](https://google.github.io/adk-docs/)
 - [Google ADK Python GitHub](https://github.com/google/adk-python)
@@ -227,20 +215,16 @@ Here are some useful resources for learning and developing with Google ADK:
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-**Mayank Negi**
+### Mayank Negi
 
-MCA Graduate | Aspiring AI Engineer | Generative AI & Agentic AI Enthusiast
+**MCA Graduate | Aspiring AI Engineer | Generative AI & Agentic AI Enthusiast**
 
-\<p>   \<a href="[https://github.com/mayanknegi22](https://github.com/mayanknegi22)">     \<img src="[https://img.shields.io/badge/GitHub-mayanknegi22-181717?logo=github](https://img.shields.io/badge/GitHub-mayanknegi22-181717?logo=github)" />   \</a> \</p>
+[![GitHub](https://img.shields.io/badge/GitHub-mayanknegi22-181717?logo=github)](https://github.com/mayanknegi22)
 
 ---
 
-\<p align="center">
-&#x20; \<strong>Building. Learning. Experimenting with Agentic AI.\</strong>
-\</p>
+### ⭐ Building. Learning. Experimenting with Agentic AI.
 
-\<p align="center">
-&#x20; If you find this repository useful, consider giving it a ⭐.
-\</p>
+If you find this repository useful, consider giving it a star!
