@@ -1,12 +1,10 @@
 
-# Google ADK Projects
+# Google ADK – Hands-on AI Agent Projects
 
-### Exploring Agentic AI with Google's Agent Development Kit
-
-Building practical AI agent applications using Python, Google's Agent Development Kit (ADK), and Gemini.
+### Exploring LLMs, Tool Integration, Web Search and Agentic AI with Python
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Python-Programming-blue?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3-blue?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Google-ADK-4285F4?logo=google&logoColor=white" />
   <img src="https://img.shields.io/badge/LLM-Gemini-8E75B2" />
   <img src="https://img.shields.io/badge/Focus-Agentic%20AI-orange" />
@@ -16,36 +14,183 @@ Building practical AI agent applications using Python, Google's Agent Developmen
 
 ## About This Repository
 
-Welcome to my **Google ADK Projects** repository!
+This repository contains my hands-on implementations and experiments with **Google's Agent Development Kit (ADK)**.
 
-This repository documents my hands-on journey into **Agentic AI development** using Google's Agent Development Kit.
+The goal is to understand how AI agents work beyond simple LLM conversations by building agents with different capabilities, integrating external tools, and exploring how multiple tools can work together.
 
-My objective is to move beyond basic LLM interactions and understand how AI agents can be designed, configured, connected with tools, and organized into structured workflows.
+The repository currently contains six agent implementations, ranging from a basic Gemini-powered conversational agent to a combined agent capable of web search, Python code execution, and timezone-based date and time retrieval.
 
-Instead of focusing only on theory, I use this repository to experiment with concepts and build practical implementations as I learn.
-
-### What I'm Exploring
-
-- Building AI agents using Google ADK.
-- Understanding agent instructions and execution flow.
-- Integrating Large Language Models (LLMs).
-- Connecting agents with tools and external functionality.
-- Exploring search-based and information-retrieval workflows.
-- Understanding multi-agent systems and orchestration.
-- Developing practical Agentic AI applications.
+Each project focuses on a particular ADK concept and helps build a practical understanding of Agentic AI development.
 
 ---
 
-## What is Google ADK?
+## Projects
 
-**Google Agent Development Kit (ADK)** is an open-source framework for developing, orchestrating, evaluating, and deploying AI agents.
+### 1. Basic Gemini Agent — `mayank_negi/`
 
-It provides a structured approach to building agents that can use LLMs, interact with tools, and execute tasks through defined workflows.
+A simple conversational AI agent built using Google's ADK and Gemini.
 
-Official resources:
+**What it does:**
+- Accepts user questions and instructions.
+- Uses Gemini to generate responses.
+- Follows the instructions defined in its agent configuration.
 
-- [Google ADK Documentation](https://google.github.io/adk-docs/)
-- [Google ADK Python Repository](https://github.com/google/adk-python)
+**Concepts explored:**
+- Creating an ADK agent.
+- Configuring an LLM.
+- Defining agent names, descriptions, and instructions.
+- Understanding the basic agent execution flow.
+
+**Model:** `gemini-3.5-flash`
+
+---
+
+### 2. Google Search Agent — `search_file/`
+
+An AI agent integrated with Google's built-in Search tool.
+
+Instead of relying only on the model's existing knowledge, this agent can use Google Search when current information or fact verification is needed.
+
+**What it does:**
+- Accepts user queries.
+- Uses Google Search to retrieve relevant information.
+- Uses search results to help generate responses.
+- Supports questions requiring current information.
+
+**Concepts explored:**
+- ADK built-in tools.
+- Google Search integration.
+- Tool selection by an LLM.
+- Grounding responses with search results.
+
+**Model:** `gemini-3.5-flash`
+
+> Note: Despite the folder name `search_file`, the current implementation uses Google Search. It does not implement local file searching.
+
+---
+
+### 3. Tavily Search Agent — `tavily_search_agent/`
+
+An AI agent that integrates Tavily Search through LangChain and Google's ADK.
+
+The Tavily tool is wrapped using ADK's `LangchainTool`, allowing the agent to use a third-party LangChain tool.
+
+**What it does:**
+- Accepts web-search-related questions.
+- Invokes Tavily Search when information needs to be retrieved or verified.
+- Retrieves up to five general search results.
+- Uses the search results to help formulate an answer.
+
+**Technologies used:**
+- Google ADK
+- Gemini
+- LangChain
+- LangChain Tavily integration
+
+**Concepts explored:**
+- Third-party tool integration.
+- LangChain and ADK interoperability.
+- Wrapping external tools using `LangchainTool`.
+- Connecting web-search capabilities to an AI agent.
+
+**Model:** `gemini-3.5-flash`
+
+---
+
+### 4. World Clock Agent — `world_clock_agent/`
+
+A specialized AI agent that retrieves the current date and time for different locations around the world.
+
+It uses a custom Python function and the `datetime` and `zoneinfo` modules.
+
+**What it does:**
+- Accepts a timezone such as `Asia/Kolkata` or `America/New_York`.
+- Retrieves the current local date and time.
+- Returns the timezone, date, time, and weekday.
+- Handles invalid timezone names with an error response.
+
+**Technologies used:**
+- Python `datetime`
+- Python `zoneinfo`
+- Google ADK
+- Gemini
+
+**Concepts explored:**
+- Creating custom Python function tools.
+- Passing arguments to tools.
+- Returning structured tool results.
+- Handling exceptions.
+- Connecting deterministic Python functionality with an LLM agent.
+
+---
+
+### 5. Code Execution Agent — `code_execution_agent/`
+
+An AI agent configured with Google's built-in `BuiltInCodeExecutor`.
+
+This agent is designed to write and execute Python code when a question involves calculations, data analysis, or other tasks that benefit from programmatic execution.
+
+**What it does:**
+- Understands the user's question.
+- Writes Python code when execution is useful.
+- Executes the generated code using ADK's code executor.
+- Explains the result to the user.
+
+**Technologies used:**
+- Google ADK
+- Gemini
+- Python
+- `BuiltInCodeExecutor`
+
+**Concepts explored:**
+- Code execution in AI agents.
+- Built-in ADK executors.
+- Combining LLM reasoning with Python execution.
+- Using code for calculations and data analysis.
+
+**Security consideration:** Code generated by an LLM should only be executed in an appropriately controlled environment. Never assume generated code is safe to run against sensitive systems or data.
+
+---
+
+### 6. Combined Multi-Tool Agent — `combined_tool_agent/`
+
+This is the most feature-rich implementation in the repository.
+
+It combines multiple tools inside a single Gemini-powered ADK agent, allowing the agent to select the appropriate capability based on the user's request.
+
+**Tools integrated:**
+
+| Tool | Purpose |
+|---|---|
+| Google Search | Retrieves current information and performs quick fact checks. |
+| Tavily Search | Provides additional web-search results and more detailed research. |
+| Custom Time Function | Retrieves the current date and time for a requested timezone. |
+| BuiltInCodeExecutor | Executes Python code for calculations and data analysis. |
+
+**What it can do:**
+- Search the web using Google Search.
+- Perform additional web searches using Tavily.
+- Retrieve the current time in different timezones.
+- Execute Python code for calculations and data analysis.
+- Select tools according to the task.
+- Provide answers using the results returned by the tools.
+
+**Technologies used:**
+- Google ADK
+- Gemini
+- Google Search
+- LangChain
+- LangChain Tavily
+- Python `datetime` and `zoneinfo`
+- `BuiltInCodeExecutor`
+
+**Concepts explored:**
+- Multiple tools in one agent.
+- Custom function tools.
+- Third-party tool integration.
+- Built-in tool integration.
+- Tool selection and orchestration.
+- Combining LLM reasoning with deterministic Python functions.
 
 ---
 
@@ -54,62 +199,87 @@ Official resources:
 ```text
 Google-adk/
 │
+├── code_execution_agent/
+│   └── agent.py
+│
+├── combined_tool_agent/
+│   └── agent.py
+│
 ├── mayank_negi/
-│   └── Agent-related project files
+│   └── agent.py
 │
 ├── search_file/
-│   └── Search and file-related project files
+│   └── agent.py
+│
+├── tavily_search_agent/
+│   └── agent.py
+│
+├── world_clock_agent/
+│   └── agent.py
 │
 ├── .gitignore
-│
 └── README.md
 ```
 
-### Project Folders
-
-| Folder | Description |
-|---|---|
-| `mayank_negi/` | Project workspace for Google ADK-related implementation and experimentation. |
-| `search_file/` | Project workspace for search and file-related implementation. |
-
-The folders will be documented in more detail as their implementations evolve.
+Each folder contains an independent ADK agent configuration.
 
 ---
 
-## How AI Agent Workflows Fit Together
+## Architecture Overview
 
-The following is a conceptual overview of an LLM-powered agent workflow. It is intended to explain the learning concepts, not to represent a verified implementation of every component in this repository.
+The repository explores different ways of extending an LLM-powered agent with tools.
 
 ```mermaid
 flowchart TD
-    A[User Input] --> B[ADK Agent]
-    B --> C[Agent Instructions]
-    C --> D[LLM - Gemini]
-    D --> E{Tool Required?}
-    E -- Yes --> F[Execute Tool]
-    F --> D
-    E -- No --> G[Generate Response]
-    G --> H[User]
+    A[User Query] --> B[Google ADK Agent]
+    B --> C[Gemini LLM]
+
+    C --> D{Select Capability}
+
+    D --> E[Google Search]
+    D --> F[Tavily Search]
+    D --> G[Custom Python Function]
+    D --> H[Python Code Executor]
+
+    E --> I[Tool Result]
+    F --> I
+    G --> I
+    H --> I
+
+    I --> C
+    C --> J[Final Response]
+    J --> K[User]
 ```
+
+This is a conceptual representation of the tool-enabled agent workflow. Individual agents in this repository use different subsets of these capabilities.
 
 ---
 
-## Tech Stack
+## Technology Stack
 
-| Technology | Purpose |
+| Technology | Usage |
 |---|---|
 | Python | Primary programming language |
-| Google ADK | AI agent development framework |
-| Gemini | Large Language Model |
-| Google AI Studio | Gemini API access |
-| VS Code | Development environment |
-| Git & GitHub | Version control and project management |
+| Google ADK | Building and orchestrating AI agents |
+| Gemini | LLM powering the agents |
+| Google Search | Web search and information retrieval |
+| Tavily | Third-party web-search integration |
+| LangChain | Tool integration through LangchainTool |
+| BuiltInCodeExecutor | Python code execution |
+| datetime | Date and time handling |
+| zoneinfo | Timezone conversion and validation |
+| Git & GitHub | Version control |
 
 ---
 
 ## Getting Started
 
-Follow these steps to set up the project locally.
+### Prerequisites
+
+- Python version supported by your installed Google ADK release.
+- Git.
+- Google AI Studio API key.
+- Tavily API key for projects using Tavily Search.
 
 ### 1. Clone the Repository
 
@@ -131,77 +301,111 @@ python -m venv .venv
 
 ### 4. Activate the Virtual Environment
 
-**Windows PowerShell:**
+**Windows PowerShell**
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-**Linux / macOS:**
+**Linux / macOS**
 
 ```bash
 source .venv/bin/activate
 ```
 
-### 5. Install Google ADK
+### 5. Install Dependencies
 
 ```bash
-pip install google-adk
+pip install google-adk langchain-tavily
 ```
 
-For reproducible project setup, install any additional dependencies specified by the individual project.
+### 6. Configure API Keys
 
-### 6. Configure Your Gemini API Key
-
-Create a `.env` file in the appropriate project directory and add:
+Set the following environment variables in your environment or in the `.env` file used by your ADK project:
 
 ```env
 GOOGLE_GENAI_USE_VERTEXAI=FALSE
 GOOGLE_API_KEY=your_google_api_key
+TAVILY_API_KEY=your_tavily_api_key
 ```
 
-Get your API key from:
+Get your Gemini API key:
 
-[Google AI Studio – API Keys](https://aistudio.google.com/apikey)
+https://aistudio.google.com/apikey
 
-**Important:** Never commit your actual API key, `.env` file, or other credentials to GitHub.
+Get your Tavily API key:
 
-### 7. Run an ADK Agent
+https://tavily.com/
 
-Once you have configured an agent, open the terminal in the appropriate parent directory and run:
+The Tavily key is needed for `tavily_search_agent` and `combined_tool_agent`. The other agents do not use Tavily.
+
+**Important:** Never commit API keys or `.env` files to GitHub.
+
+### 7. Run an Individual Agent
+
+From the repository root, use:
 
 ```bash
 adk web
 ```
 
-Refer to the [Google ADK documentation](https://google.github.io/adk-docs/) for the correct execution directory and configuration for your agent.
+The ADK web interface can be used to select and interact with the available agent folders.
+
+Alternatively, run a specific agent from the repository root:
+
+```bash
+adk run mayank_negi
+```
+
+Other agents:
+
+```bash
+adk run search_file
+adk run tavily_search_agent
+adk run world_clock_agent
+adk run code_execution_agent
+adk run combined_tool_agent
+```
 
 ---
 
-## Learning Roadmap
+## Key Learning Outcomes
 
-My ongoing learning objectives include:
+Through these implementations, I am exploring:
 
-- [x] Set up a Python development environment.
-- [x] Explore Google's Agent Development Kit.
-- [ ] Understand agent instructions and configurations.
-- [ ] Build practical LLM-powered agents.
-- [ ] Explore tool integration and function execution.
-- [ ] Experiment with search and retrieval workflows.
-- [ ] Understand sessions and memory management.
-- [ ] Explore multi-agent systems.
-- [ ] Learn agent evaluation and deployment.
+- Creating LLM-powered agents using Google ADK.
+- Configuring Gemini models and agent instructions.
+- Integrating built-in ADK tools.
+- Creating custom Python function tools.
+- Connecting third-party tools using LangChain.
+- Retrieving information through web search.
+- Executing Python code through an agent.
+- Handling timezone-aware date and time operations.
+- Combining multiple tools within a single agent.
+- Understanding tool selection and agent orchestration.
 
 ---
 
-## Learning Resources
+## Future Improvements
 
-| Resource | Link |
-|---|---|
-| Google ADK Documentation | [Official Docs](https://google.github.io/adk-docs/) |
-| Google ADK Python | [GitHub](https://github.com/google/adk-python) |
-| Google AI Studio | [Visit](https://aistudio.google.com/) |
-| Google AI for Developers | [Visit](https://ai.google.dev/) |
+- [ ] Add local file-search functionality to the `search_file` project.
+- [ ] Add more custom Python tools.
+- [ ] Explore multi-agent systems and agent delegation.
+- [ ] Experiment with session management and memory.
+- [ ] Add structured logging and error handling.
+- [ ] Explore agent evaluation and testing.
+- [ ] Build more advanced Agentic AI applications.
+- [ ] Explore deployment options for ADK agents.
+
+---
+
+## Useful Resources
+
+- [Google ADK Documentation](https://google.github.io/adk-docs/)
+- [Google ADK Python GitHub](https://github.com/google/adk-python)
+- [Google AI Studio](https://aistudio.google.com/)
+- [LangChain Documentation](https://python.langchain.com/docs/)
+- [Tavily Documentation](https://docs.tavily.com/)
 
 ---
 
@@ -211,13 +415,13 @@ My ongoing learning objectives include:
 
 MCA Graduate | Aspiring AI Engineer | Generative AI & Agentic AI Enthusiast
 
-I'm interested in building practical AI applications and continuously improving my understanding of Python, LLMs, RAG systems, and Agentic AI.
+I am interested in building practical AI applications and continuously improving my understanding of Python, Large Language Models, RAG systems, and Agentic AI.
 
-- **GitHub:** [mayanknegi22](https://github.com/mayanknegi22)
-- **Repository:** [Google ADK Projects](https://github.com/mayanknegi22/Google-adk)
+- GitHub: [mayanknegi22](https://github.com/mayanknegi22)
+- Repository: [Google ADK Projects](https://github.com/mayanknegi22/Google-adk)
 
 ---
 
-If you find this repository interesting, feel free to explore the code and follow my learning journey.
-
-**More experiments and implementations coming soon!**
+<p align="center">
+  <strong>Building. Learning. Experimenting with Agentic AI.</strong>
+</p>
