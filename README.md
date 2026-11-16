@@ -1,59 +1,108 @@
-# Google ADK Projects
+# Google ADK – AI Agent Development
 
-<p align="center">
+\<p align="center">
+&#x20; \*\*Building Intelligent AI Agents with Python and Google's Agent Development Kit\*\*
+\</p>
 
-  **Exploring Agentic AI with Google's Agent Development Kit**
-
-  Building and experimenting with AI agents using Python and Google ADK.
-
-</p>
+\<p align="center">
+&#x20; ![Python]\([https://img.shields.io/badge/Python-3.10%2B-blue?logo=python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python))
+&#x20; ![Google ADK]\([https://img.shields.io/badge/Framework-Google%20ADK-4285F4?logo=google](https://img.shields.io/badge/Framework-Google%20ADK-4285F4?logo=google))
+&#x20; ![Gemini]\([https://img.shields.io/badge/LLM-Gemini-8E75B2?logo=google](https://img.shields.io/badge/LLM-Gemini-8E75B2?logo=google))
+&#x20; ![Status]\([https://img.shields.io/badge/Status-Active-success](https://img.shields.io/badge/Status-Active-success))
+&#x20; ![License]\([https://img.shields.io/badge/License-MIT-green](https://img.shields.io/badge/License-MIT-green))
+\</p>
 
 ---
 
-## About This Repository
+## Overview
 
-This repository contains my hands-on learning and development journey with **Google Agent Development Kit (ADK)**.
+This repository is a collection of practical implementations and experiments using **Google Agent Development Kit (ADK)**, a framework for building, orchestrating, and deploying AI agents.
 
-The goal is to understand how to build AI agents, configure their behavior, integrate tools, and develop agent-based applications using Python.
+The primary objective is to explore the fundamentals of Agentic AI and understand how intelligent agents can interact with tools, process user requests, and perform tasks through structured workflows.
 
-Rather than focusing only on theoretical concepts, this repository emphasizes practical implementation and experimentation with Google's agent development framework.
+This repository focuses on hands-on development, practical experimentation, and learning how to build AI-powered applications using Python.
+
+## Projects
+
+This repository currently contains the following implementations:
+
+### 1. Mayank Negi
+
+**Directory:** `mayank_negi/`
+
+An individual Google ADK project.
+
+- Agent implementation and configuration.
+- Exploration of Google ADK capabilities.
+- Practical experimentation with LLM-powered agents.
+
+### 2. Search File
+
+**Directory:** `search_file/`
+
+A separate project exploring file-search-related functionality using Google ADK.
+
+- Exploring file-search workflows.
+- Understanding agent interaction with information sources.
+- Experimenting with AI-powered information retrieval.
+
+*Detailed implementation descriptions and examples will be added as the projects evolve.*
 
 ## What is Google ADK?
 
-Google Agent Development Kit (ADK) is an open-source framework designed to simplify the development, orchestration, evaluation, and deployment of AI agents.
+Google Agent Development Kit is an open-source, code-first framework that helps developers build AI agents.
 
-It provides developers with tools to build agents that can reason, interact with external tools, and execute tasks through structured workflows.
+It provides capabilities for:
 
-Official Documentation: https://google.github.io/adk-docs/
+- Creating LLM-powered agents.
+- Integrating external tools.
+- Managing agent workflows.
+- Building multi-agent systems.
+- Managing sessions and state.
+- Evaluating and deploying AI agents.
 
-GitHub Repository: https://github.com/google/adk-python
+Official Documentation: [https://google.github.io/adk-docs/](https://google.github.io/adk-docs/)
 
-## Tech Stack
+GitHub: [https://github.com/google/adk-python](https://github.com/google/adk-python)
 
-| Technology | Purpose |
-|---|---|
-| Python | Primary programming language |
-| Google ADK | AI agent development framework |
-| Gemini | Large Language Model |
-| VS Code | Development environment |
-| Git & GitHub | Version control |
+## Technology Stack
 
-## Project Structure
+| Technology       | Purpose                     |
+| ---------------- | --------------------------- |
+| Python           | Core programming language   |
+| Google ADK       | Agent development framework |
+| Gemini           | Large Language Model        |
+| Google AI Studio | API key and model access    |
+| VS Code          | Development environment     |
+| Git & GitHub     | Version control             |
 
-```text
-Google-adk/
-│
-├── .venv/              # Python virtual environment (local)
-├── .gitignore          # Files excluded from Git
-├── README.md           # Project documentation
-└── ...                 # Agent implementation files
+## Architecture
+
+The general execution flow of an LLM-powered agent can be represented as:
+
+```mermaid
+flowchart TD
+    A[User Input] --> B[ADK Agent]
+    B --> C[Agent Instructions]
+    C --> D[LLM - Gemini]
+    D --> E{Tool Required?}
+    E -->|Yes| F[Execute Tool]
+    F --> D
+    E -->|No| G[Generate Response]
+    G --> H[User]
 ```
 
-*The project structure will be updated as additional components are implemented.*
+*This is a conceptual illustration of an agent workflow, not a verified diagram of every implementation in this repository.*
 
 ## Getting Started
 
-Follow these steps to run the project locally.
+Follow these instructions to set up the project locally.
+
+### Prerequisites
+
+- Python 3.10 or later, compatible with your installed Google ADK version.
+- Git.
+- Google AI Studio API key.
 
 ### 1. Clone the Repository
 
@@ -61,7 +110,7 @@ Follow these steps to run the project locally.
 git clone https://github.com/mayanknegi22/Google-adk.git
 ```
 
-### 2. Navigate to the Project Directory
+### 2. Navigate to the Project
 
 ```bash
 cd Google-adk
@@ -73,12 +122,18 @@ cd Google-adk
 python -m venv .venv
 ```
 
-### 4. Activate the Virtual Environment
+### 4. Activate the Environment
 
 **Windows PowerShell:**
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
+```
+
+**Linux / macOS:**
+
+```bash
+source .venv/bin/activate
 ```
 
 ### 5. Install Google ADK
@@ -87,9 +142,9 @@ python -m venv .venv
 pip install google-adk
 ```
 
-### 6. Configure Environment Variables
+### 6. Configure API Credentials
 
-Create a `.env` file in the appropriate agent directory and configure your Gemini API credentials.
+Create a `.env` file in the appropriate agent directory.
 
 Example:
 
@@ -98,46 +153,57 @@ GOOGLE_GENAI_USE_VERTEXAI=FALSE
 GOOGLE_API_KEY=your_google_api_key
 ```
 
-**Important:** Never upload your actual API keys or `.env` files to GitHub.
+Get your API key from:
+
+[https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+
+**Security:** Never commit your `.env` file, API keys, or credentials to GitHub.
 
 ### 7. Run the Agent
 
-Once your agent implementation is ready, you can use the ADK CLI:
+Navigate to the directory containing the relevant ADK agent package and execute:
 
 ```bash
 adk web
 ```
 
-Run this command from the directory containing your agent package.
+You can also run an agent through the ADK terminal interface:
 
-## Learning Objectives
+```bash
+adk run <agent_folder_name>
+```
 
-Through this repository, I aim to explore:
+Replace `<agent_folder_name>` with the actual agent package name.
 
-- Understanding AI agents and their architecture.
-- Building agents using Google ADK.
-- Working with Large Language Models (LLMs).
-- Integrating tools with AI agents.
-- Understanding agent instructions and execution flow.
-- Exploring multi-agent systems.
-- Learning agent orchestration and workflows.
-- Developing practical Agentic AI applications.
+## Key Learning Areas
 
-## Future Improvements
+Through these implementations, this repository explores:
 
-- Build more advanced AI agents.
-- Integrate external APIs and tools.
-- Explore multi-agent communication.
-- Implement structured agent workflows.
-- Experiment with memory and session management.
-- Explore agent evaluation and deployment.
+- Fundamentals of Agentic AI.
+- Google ADK architecture.
+- LLM-powered agent development.
+- Agent instructions and configurations.
+- Tool integration and execution.
+- AI-powered search and information retrieval.
+- Agent workflows and orchestration.
+- Practical Python application development.
+
+## Future Roadmap
+
+- [ ] Develop more advanced AI agents.
+- [ ] Explore custom tool integrations.
+- [ ] Implement multi-agent architectures.
+- [ ] Explore session management and memory.
+- [ ] Build more advanced search and retrieval workflows.
+- [ ] Implement agent evaluation.
+- [ ] Explore deployment of AI agent applications.
 
 ## Learning Resources
 
-- [Google ADK Official Documentation](https://google.github.io/adk-docs/)
-- [Google ADK Python GitHub](https://github.com/google/adk-python)
+- [Google ADK Documentation](https://google.github.io/adk-docs/)
+- [Google ADK Python Repository](https://github.com/google/adk-python)
 - [Google AI Studio](https://aistudio.google.com/)
-- [Google AI for Developers](https://ai.google.dev/)
+- [Google AI Developer Documentation](https://ai.google.dev/)
 
 ## Author
 
@@ -145,10 +211,10 @@ Through this repository, I aim to explore:
 
 MCA Graduate | Aspiring AI Engineer | Generative AI & Agentic AI Enthusiast
 
-- GitHub: https://github.com/mayanknegi22
+- GitHub: [@mayanknegi22](https://github.com/mayanknegi22)
 
 ---
 
-<p align="center">
-  If you find this repository useful, consider giving it a ⭐.
-</p>
+\<p align="center">   \*\*Building. Learning. Experimenting with Agentic AI.\*\* \</p>
+
+\<p align="center">   If you find this repository interesting, consider giving it a ⭐. \</p>
