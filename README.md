@@ -1,155 +1,167 @@
 
-# 🤖 Google ADK — AI Agents, MCP & Agentic AI Projects
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" />
-  <img src="https://img.shields.io/badge/Google-ADK-4285F4?logo=google" />
-  <img src="https://img.shields.io/badge/LLM-Gemini-8E75B2?logo=googlegemini" />
-  <img src="https://img.shields.io/badge/Agentic_AI-Exploring-success" />
-  <img src="https://img.shields.io/badge/MCP-Integrated-orange" />
+# 🤖 Google ADK — Agentic AI Playground
+
+### Building, Exploring & Learning AI Agents with Google Agent Development Kit
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google_ADK-Agent_Framework-4285F4?logo=google" />
+  <img src="https://img.shields.io/badge/Gemini-LLM-8E75B2?logo=googlegemini" />
+  <img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-orange" />
+  <img src="https://img.shields.io/badge/AI-Agents-success" />
+  <img src="https://img.shields.io/badge/Status-Actively_Learning-brightgreen" />
 </p>
 
-<p align="center">
-  <b>A hands-on collection of AI agent implementations using Google's Agent Development Kit (ADK).</b>
-  <br />
-  Exploring LLM-powered agents, tool calling, MCP integrations, structured outputs, code execution, and intelligent automation.
-</p>
+**A hands-on repository exploring AI agents, tool calling, multi-tool orchestration, MCP integrations, structured outputs, session management, and intelligent automation.**
 
-<p align="center">
-  <a href="https://github.com/mayanknegi22">GitHub Profile</a> •
-  <a href="https://google.github.io/adk-docs/">Google ADK Documentation</a> •
-  <a href="https://modelcontextprotocol.io/">MCP Documentation</a>
-</p>
+[Explore Projects](#-projects) · [Installation](#-installation) · [Run Agents](#-running-the-agents) · [Technologies](#-technology-stack)
+
+</div>
 
 ---
 
-## 📌 About This Repository
+# 📖 About This Repository
 
-This repository contains my hands-on implementations and experiments with **Google's Agent Development Kit (ADK)**.
+This repository is my practical learning journey with **Google Agent Development Kit (ADK)**.
 
-My objective is to understand how modern AI agents work beyond basic LLM conversations by building practical applications that can:
+Rather than focusing only on simple LLM conversations, I am exploring how to build AI agents that can interact with tools, perform tasks, access external services, execute code, manage workflows, and maintain conversational context.
 
-- Understand user instructions and generate intelligent responses.
-- Search the web and retrieve external information.
-- Call custom Python functions and external tools.
-- Execute Python code for calculations and other tasks.
-- Work with multiple tools within a single agent.
-- Connect local and remote services through the Model Context Protocol (MCP).
-- Read and modify files within a controlled workspace.
-- Extract information into structured, validated formats.
-- Assist with coding workflows, testing, and GitHub operations.
+The projects progress from basic AI agents to more advanced agentic workflows involving external tools and the Model Context Protocol (MCP).
 
-The repository demonstrates a progression from simple conversational agents to tool-enabled agents and MCP-powered coding workflows.
+### 🎯 What I'm Exploring
 
-**Current collection: 9 independent agent implementations.**
-
----
-
-## 🗂️ Projects Overview
-
-| # | Project | Main Capability | Key Concept |
-|---|---|---|---|
-| 01 | Basic Gemini Agent | Conversational AI | LLM fundamentals |
-| 02 | Google Search Agent | Web search | Built-in tools |
-| 03 | Tavily Search Agent | Web research | LangChain integration |
-| 04 | World Clock Agent | Timezone information | Custom Python tools |
-| 05 | Code Execution Agent | Python execution | Built-in code executor |
-| 06 | Combined Multi-Tool Agent | Multiple capabilities | Tool orchestration |
-| 07 | GitHub Publisher MCP Agent | Filesystem and GitHub access | MCP integration |
-| 08 | Coding Agent | Coding and development workflows | MCP, shell and approvals |
-| 09 | Structured Output Agent | Information extraction | Pydantic schemas |
+- Building AI agents with Google ADK
+- Gemini model integration
+- Agent instructions and configuration
+- Tool calling and function calling
+- Google Search integration
+- Custom Python tools
+- Third-party tools using LangChain
+- Python code execution
+- Multi-tool agent orchestration
+- Model Context Protocol (MCP)
+- Local and remote MCP servers
+- Filesystem and GitHub integrations
+- AI coding agents
+- Human approval workflows
+- Structured outputs using Pydantic
+- Session management and conversation history
+- Runner-based agent execution
+- Stateful conversational applications
 
 ---
 
-# 🚀 Individual Projects
+# 🗺️ Repository Roadmap
 
-## 1. Basic Gemini Agent
+This repository is organized into individual projects, with each folder focusing on a different concept or capability of Google ADK.
 
-**Directory:** `mayank_negi/`
-
-A basic conversational AI agent built using Google's Agent Development Kit and Gemini.
-
-### Features
-- Accepts user questions and instructions.
-- Generates responses using Gemini.
-- Follows agent-specific instructions.
-- Demonstrates the fundamental structure of an ADK agent.
-
-### Concepts Explored
-- Agent initialization.
-- Gemini model configuration.
-- Agent names and descriptions.
-- Instruction-based agent behavior.
-- Basic LLM interaction.
+| # | Project | Concepts |
+|---|---|---|
+| 01 | `mayank_negi` | Basic Gemini Agent |
+| 02 | `search_file` | Google Search Tool |
+| 03 | `tavily_search_agent` | Tavily + LangChain Integration |
+| 04 | `world_clock_agent` | Custom Python Function Tool |
+| 05 | `code_execution_agent` | Python Code Execution |
+| 06 | `combined_tool_agent` | Multi-Tool Agent |
+| 07 | `mcp_agent` | Filesystem + GitHub MCP |
+| 08 | `coding_agent` | AI Coding Agent + MCP + Approvals |
+| 09 | `structured_output` | Pydantic + Structured Output |
+| 10 | `runner_chatbot_demo` | Runner-Based Chatbot Learning |
+| 11 | `session_runner_demo` | Sessions + Runner Learning |
 
 ---
 
-## 2. Google Search Agent
+# 🚀 Projects
 
-**Directory:** `search_file/`
+## 01 — Basic Gemini Agent
 
-An AI agent integrated with Google's built-in Search tool.
+📁 `mayank_negi/`
 
-Instead of relying exclusively on the model's existing knowledge, the agent can use Google Search to retrieve information relevant to a user's question.
+My first basic conversational AI agent built using Google ADK and Gemini.
 
-### Features
+### What it does
+
+- Accepts natural-language questions.
+- Generates responses using a Gemini model.
+- Follows system instructions.
+- Demonstrates the basic structure of an ADK agent.
+
+### Concepts
+
+- `Agent`
+- Model configuration
+- Agent instructions
+- Agent name and description
+- Basic LLM interaction
+
+---
+
+## 02 — Google Search Agent
+
+📁 `search_file/`
+
+An AI agent that uses Google's built-in Search capability to retrieve information from the web.
+
+### What it does
+
 - Accepts user queries.
-- Uses Google Search for information retrieval.
-- Supports questions requiring current information.
-- Uses retrieved information to formulate responses.
+- Uses Google Search when external information is required.
+- Generates responses grounded in retrieved information.
 
-### Concepts Explored
-- Built-in ADK tools.
-- Google Search integration.
-- LLM tool selection.
-- Search-grounded responses.
+### Concepts
 
-> Note: Despite the directory name `search_file`, the current implementation uses Google Search rather than local filesystem searching.
+- Built-in ADK tools
+- Google Search
+- Tool calling
+- Search-grounded responses
+
+> The folder name is `search_file`, but the implementation uses Google Search rather than local file searching.
 
 ---
 
-## 3. Tavily Search Agent
+## 03 — Tavily Search Agent
 
-**Directory:** `tavily_search_agent/`
+📁 `tavily_search_agent/`
 
-An AI agent that integrates Tavily Search through LangChain and Google ADK.
+An agent integrating Tavily Search with Google ADK through LangChain.
 
-The implementation uses ADK's `LangchainTool` wrapper to make a third-party LangChain tool available to the agent.
+### What it does
 
-### Features
 - Performs web searches using Tavily.
-- Retrieves up to five general search results.
-- Uses search results to help answer user questions.
+- Retrieves relevant search results.
+- Uses external information to answer user queries.
 
 ### Technologies
+
 - Google ADK
 - Gemini
 - LangChain
 - LangChain Tavily
-- Tavily Search
+- Tavily API
 
-### Concepts Explored
-- Third-party tool integration.
-- LangChain and ADK interoperability.
-- `LangchainTool`.
-- External search capabilities.
+### Concepts
+
+- Third-party tool integration
+- `LangchainTool`
+- Tool interoperability
+- External search APIs
 
 ---
 
-## 4. World Clock Agent
+## 04 — World Clock Agent
 
-**Directory:** `world_clock_agent/`
+📁 `world_clock_agent/`
 
-A specialized AI agent that retrieves the current date and time for different locations around the world.
+An AI agent using a custom Python function to retrieve timezone-aware date and time information.
 
-It uses custom Python functionality with the `datetime` and `zoneinfo` modules.
+### What it does
 
-### Features
-- Accepts timezone-related questions.
-- Uses IANA timezone identifiers.
-- Retrieves local date and time.
-- Returns timezone, date, time, and weekday.
-- Handles invalid timezone names.
+- Retrieves the current time for different locations.
+- Uses timezone identifiers.
+- Returns date, time, timezone and weekday.
+- Handles invalid timezone inputs.
 
 ### Example Timezones
 
@@ -160,94 +172,95 @@ Europe/London
 Asia/Tokyo
 ```
 
-### Concepts Explored
-- Custom Python function tools.
-- Function arguments and return values.
-- Timezone-aware date and time handling.
-- Exception handling.
-- Combining deterministic Python functionality with an LLM.
+### Technologies
+
+- Python
+- `datetime`
+- `zoneinfo`
+
+### Concepts
+
+- Custom function tools
+- Tool arguments
+- Function return values
+- Timezone-aware programming
+- Exception handling
+- Deterministic tool execution
 
 ---
 
-## 5. Code Execution Agent
+## 05 — Code Execution Agent
 
-**Directory:** `code_execution_agent/`
+📁 `code_execution_agent/`
 
-An AI agent configured with Google's built-in `BuiltInCodeExecutor`.
+An AI agent using the ADK `BuiltInCodeExecutor` to perform tasks that require Python execution.
 
-The agent can generate and execute Python code when a request involves calculations, data analysis, or other tasks that benefit from programmatic execution.
+### What it does
 
-### Features
-- Understands the user's request.
-- Generates Python code when execution is useful.
-- Executes code through ADK's built-in code executor.
-- Explains the execution result.
+- Understands a programming or calculation request.
+- Generates Python code when required.
+- Executes code using the configured code executor.
+- Uses execution results to generate a response.
 
 ### Technologies
+
 - Google ADK
 - Gemini
 - Python
 - `BuiltInCodeExecutor`
 
-### Concepts Explored
-- LLM-generated Python code.
-- Built-in ADK executors.
-- Programmatic calculations.
-- Combining LLM reasoning with code execution.
+### Concepts
 
-**Security consideration:** Generated code should only execute in a controlled environment. Avoid exposing sensitive files, credentials, or systems to untrusted generated code.
+- Code generation
+- Code execution
+- Tool-assisted reasoning
+- Programmatic calculations
+- Execution results
+
+> ⚠️ Generated code should be executed only in an appropriately controlled environment.
 
 ---
 
-## 6. Combined Multi-Tool Agent
+## 06 — Combined Multi-Tool Agent
 
-**Directory:** `combined_tool_agent/`
+📁 `combined_tool_agent/`
 
-This implementation combines multiple tools within a single Gemini-powered ADK agent.
-
-The agent uses its instructions and the user's request to select an appropriate capability.
+An agent combining multiple capabilities in a single system.
 
 ### Integrated Tools
 
-| Tool | Purpose |
+| Tool | Capability |
 |---|---|
-| Google Search | Web information retrieval |
-| Tavily Search | Additional web research |
-| Custom Time Function | Timezone-based date and time |
-| BuiltInCodeExecutor | Python code execution |
+| Google Search | Search the web |
+| Tavily Search | External web research |
+| Custom Time Function | Retrieve timezone information |
+| BuiltInCodeExecutor | Execute Python code |
 
-### Features
-- Searches the web using Google Search.
-- Performs additional searches using Tavily.
-- Retrieves current time across different timezones.
-- Executes Python code for calculations and data analysis.
-- Uses agent instructions to guide tool selection.
-- Combines multiple capabilities in one agent.
+### What it does
 
-### Concepts Explored
-- Multiple tool integration.
-- Custom function tools.
-- Built-in ADK tools.
-- Third-party tool integration.
-- Tool selection and orchestration.
-- Combining LLM reasoning with deterministic Python functions.
+The agent receives a user's request and can select from the available tools to accomplish the task.
+
+### Concepts
+
+- Multi-tool integration
+- Tool selection
+- Tool orchestration
+- Custom Python tools
+- Built-in tools
+- External integrations
+- Combining LLMs with deterministic functions
 
 ---
 
-## 7. GitHub Publisher — MCP Agent
+## 07 — GitHub Publisher MCP Agent
 
-**Directory:** `mcp_agent/`
+📁 `mcp_agent/`
 
-This project explores the **Model Context Protocol (MCP)** and how external MCP servers can be connected to a Google ADK agent.
+An agent exploring the **Model Context Protocol (MCP)** to connect Google ADK with external tool servers.
 
-The agent integrates two MCP servers:
+### Integrated MCP Servers
 
-1. Filesystem MCP Server
-2. GitHub MCP Server
-
-It uses Google's `McpToolset` to connect these servers and expose their available tools to the agent.
-
-### A. Filesystem MCP Server
+#### 📂 Filesystem MCP
 
 Uses:
 
@@ -255,187 +268,126 @@ Uses:
 @modelcontextprotocol/server-filesystem
 ```
 
-The local filesystem server runs through Node.js and `npx`, using a standard input/output (stdio) connection.
+Provides access to filesystem tools within the configured workspace.
 
-Features:
-- Access to files within the configured directory.
-- Filesystem operations through MCP tools.
-- A dedicated working directory for file operations.
+The server is launched locally using Node.js / npx and communicates through stdio.
 
-The agent creates a `files` directory inside its project folder and configures the filesystem server to use that directory.
+#### 🐙 GitHub MCP
 
-### B. GitHub MCP Server
-
-Connects to the GitHub Copilot MCP endpoint:
+Connects to:
 
 ```text
 https://api.githubcopilot.com/mcp/
 ```
 
-Authentication is handled through a GitHub token stored in the environment variable:
+Uses a GitHub token for authentication.
 
-```env
-GITHUB_TOKEN=your_github_token
+### Architecture
+
+```text
+                Google ADK Agent
+                       |
+                     Gemini
+                       |
+                   McpToolset
+                  /          \
+                 /            \
+       Filesystem MCP       GitHub MCP
+            |                   |
+      Local Workspace       GitHub API
 ```
 
-The agent can access the tools exposed by the connected GitHub MCP server, subject to the token's permissions and server capabilities.
+### Concepts
 
-### MCP Integration
-
-The implementation uses:
-
-- `McpToolset`
-- `StdioConnectionParams`
-- `StreamableHTTPConnectionParams`
-- `StdioServerParameters`
-
-| MCP Server | Transport | Purpose |
-|---|---|---|
-| Filesystem | Local stdio | Local file operations |
-| GitHub | Remote Streamable HTTP | GitHub-related operations |
-
-**Agent name:** `github_publisher`
-
-### Concepts Explored
-- Model Context Protocol.
-- MCP client-server architecture.
-- Local and remote MCP servers.
-- Standard input/output transport.
-- Streamable HTTP transport.
-- MCP tool discovery and integration.
-- Environment-based authentication.
-- Connecting external services to Google ADK.
+- Model Context Protocol
+- MCP servers
+- MCP client integrations
+- Stdio transport
+- Streamable HTTP transport
+- Filesystem tools
+- GitHub tools
+- Authentication
+- External tool discovery
 
 ---
 
-## 8. Coding Agent
+## 08 — AI Coding Agent
 
-**Directory:** `coding_agent/`
+📁 `coding_agent/`
 
-An AI coding assistant built using Google ADK and MCP integrations.
-
-This agent explores how an AI agent can work with a local development workspace, execute commands, run tests, and interact with GitHub through external tools.
+An AI coding assistant designed to explore how agents can interact with a development environment.
 
 ### Integrated Capabilities
 
-| Integration | Purpose |
+| Integration | Capability |
 |---|---|
-| Filesystem MCP | Read, create, edit and manage workspace files |
-| Local Shell MCP Server | Run commands and manage development processes |
-| GitHub MCP | Access GitHub operations when a token is configured |
+| Filesystem MCP | Read and manage project files |
+| Shell MCP Server | Execute development commands |
+| GitHub MCP | GitHub operations when configured |
 
-### Features
-- Inspects existing workspace files before making changes.
-- Creates and edits project files.
-- Executes development commands through a custom shell MCP server.
-- Runs tests using pytest.
-- Starts and monitors development servers through dedicated tools.
-- Checks application URLs and retrieves server logs.
-- Connects to GitHub when a personal access token is configured.
-- Uses confirmation checks for potentially sensitive operations.
+### What it explores
 
-### Safety and Approval Workflow
+- Inspecting codebases
+- Creating and modifying files
+- Executing commands
+- Running tests
+- Managing development servers
+- Reading logs
+- Checking application endpoints
+- Interacting with GitHub
 
-The implementation distinguishes between operations that can run automatically and operations requiring approval.
+### Approval Workflow
 
-Examples of automatically approved command prefixes include:
+The implementation includes approval checks for selected operations.
 
-```text
-pytest
-python -m pytest
-git status
-git diff
-git log
-```
+Some commands can run automatically, while potentially sensitive operations require confirmation.
 
-Other commands require confirmation. Starting a server also requires confirmation.
+### Concepts
 
-GitHub write operations are configured to require approval, while selected read operations do not.
+- Coding agents
+- MCP integration
+- Shell tools
+- Filesystem access
+- Tool filtering
+- Human-in-the-loop approval
+- Test execution
+- Development workflows
+- GitHub integration
 
-### GitHub Integration
-
-The agent uses the GitHub MCP endpoint:
-
-```text
-https://api.githubcopilot.com/mcp/
-```
-
-The GitHub connection is optional and is enabled when `GITHUB_PAT` is configured.
-
-### Concepts Explored
-- Building coding agents.
-- Filesystem MCP integration.
-- Custom shell MCP server.
-- Tool filtering.
-- Human approval workflows.
-- Running tests through an agent.
-- Development server management.
-- GitHub MCP integration.
-- Safer execution of development commands.
-
-> Security note: Approval checks are useful safeguards, not a complete security boundary. Review commands, token permissions, workspace access and server exposure before using the agent with sensitive projects.
+> ⚠️ Approval mechanisms are safeguards, not a complete security boundary. Always review permissions, commands and workspace access.
 
 ---
 
-## 9. Structured Output Agent
+## 09 — Structured Output Agent
 
-**Directory:** `structured_output/`
+📁 `structured_output/`
 
-An AI agent that extracts student enquiry information from natural-language messages and returns it in a predefined structured format.
+An agent that extracts information from natural-language messages and returns it in a predefined structured format.
 
-This implementation uses **Pydantic models** with Google ADK's `output_schema`.
+The implementation explores Pydantic schemas and Google ADK's structured output capabilities.
 
-### Structured Data Model
+### Example Use Case
 
-The project defines an `Enquiry` model with fields such as:
+Extract student enquiry information:
 
-| Field | Type | Purpose |
-|---|---|---|
-| `name` | Optional string | Student's full name |
-| `email` | Optional string | Email address |
-| `interested_in` | List of Literal values | Course interests |
-| `budget_inr` | Optional integer | Budget in Indian rupees |
-
-The supported course-interest values are:
-
-```python
-[
-    "GenAI",
-    "Data Science",
-    "MLOps",
-    "Deep Learning",
-    "Other"
-]
-```
-
-### Features
-- Extracts information from natural-language messages.
-- Uses a Pydantic model to define the output structure.
-- Restricts course interests to predefined values.
-- Validates budget values.
-- Leaves unmentioned optional information empty instead of guessing.
-- Stores the structured result using the ADK output key `enquiry`.
-
-### Concepts Explored
-- Structured LLM outputs.
-- Pydantic `BaseModel`.
-- Pydantic `Field`.
-- Python type hints.
-- `Literal` types.
-- Schema-based output validation.
-- ADK `output_schema`.
-- ADK `output_key`.
+- Name
+- Email
+- Course interests
+- Budget
 
 ### Example Input
 
 ```text
 Hi, my name is Rahul Sharma.
+
 My email is rahul@example.com.
+
 I am interested in GenAI and MLOps.
-My budget is 15k.
+
+My budget is 15,000 INR.
 ```
 
-### Expected Structured Output
+### Expected Output
 
 ```json
 {
@@ -449,84 +401,141 @@ My budget is 15k.
 }
 ```
 
-The example demonstrates the intended schema and extraction behavior.
+### Technologies
+
+- Pydantic
+- Python type hints
+- Google ADK
+- Structured output
+
+### Concepts
+
+- `BaseModel`
+- `Field`
+- `Literal`
+- Schema validation
+- `output_schema`
+- `output_key`
+- Structured information extraction
 
 ---
 
-# 🏗️ Architecture Overview
+## 10 — Runner Chatbot Demo
 
-## 1. Tool-Enabled Agent Workflow
+📁 `runner_chatbot_demo/`
 
-The following diagram illustrates the general workflow used by the tool-enabled agents.
+A dedicated learning project exploring how an ADK agent can be executed through a Runner-based application.
+
+### Learning Focus
+
+- Agent execution
+- Runner initialization
+- Sending user messages to an agent
+- Receiving agent events
+- Processing agent responses
+- Understanding the execution lifecycle
+
+This project is intended to help understand how an agent can be run programmatically outside the ADK web interface.
+
+---
+
+## 11 — Session Runner Demo
+
+📁 `session_runner_demo/`
+
+A learning project focused on understanding the relationship between ADK sessions, runners and conversational state.
+
+### Learning Focus
+
+- Creating and managing sessions
+- Understanding session IDs
+- User IDs
+- Conversation history
+- Stateful conversations
+- Runner execution
+- Message handling
+- Agent events
+- Maintaining context between user messages
+
+### Conceptual Workflow
 
 ```mermaid
 flowchart TD
-    A[User Query] --> B[Google ADK Agent]
-    B --> C[Gemini LLM]
-    C --> D{Select Tool}
+    A[User Message] --> B[Runner]
+    B --> C[Session]
+    C --> D[Agent]
+    D --> E[Gemini]
+    E --> F[Agent Response]
+    F --> G[Session History]
+    G --> H[Next User Message]
+    H --> B
+```
 
+The purpose of this project is to understand how an agent can retain conversational context across multiple interactions when the appropriate session and state mechanisms are configured.
+
+---
+
+# 🏗️ Agent Architecture
+
+## Basic Agent
+
+```mermaid
+flowchart TD
+    A[User] --> B[ADK Agent]
+    B --> C[Gemini]
+    C --> D[Response]
+    D --> A
+```
+
+## Tool-Enabled Agent
+
+```mermaid
+flowchart TD
+    A[User Query] --> B[ADK Agent]
+    B --> C[Gemini]
+    C --> D{Tool Selection}
     D --> E[Google Search]
-    D --> F[Tavily Search]
-    D --> G[Custom Python Function]
-    D --> H[BuiltInCodeExecutor]
-
+    D --> F[Custom Python Function]
+    D --> G[Tavily]
+    D --> H[Code Executor]
     E --> I[Tool Result]
     F --> I
     G --> I
     H --> I
-
     I --> C
-    C --> J[Final Response]
-    J --> K[User]
+    C --> J[Final Answer]
 ```
 
-## 2. MCP Agent Architecture
+## MCP-Enabled Agent
 
 ```mermaid
 flowchart TD
-    A[User Request] --> B[ADK Agent]
-    B --> C[Gemini LLM]
-    C --> D[McpToolset]
-
-    D --> E[Filesystem MCP Server]
-    D --> F[GitHub MCP Server]
-
-    E --> G[Local Files Directory]
-    F --> H[GitHub Services]
-
+    A[User] --> B[ADK Agent]
+    B --> C[Gemini]
+    C --> D[MCP Toolset]
+    D --> E[Filesystem MCP]
+    D --> F[GitHub MCP]
+    E --> G[Local Files]
+    F --> H[GitHub]
     G --> I[Tool Results]
     H --> I
-
     I --> C
-    C --> J[Agent Response]
-    J --> K[User]
+    C --> J[Response]
 ```
 
-## 3. Coding Agent Architecture
+## Stateful Agent
 
 ```mermaid
 flowchart TD
-    A[Developer Request] --> B[Coding Agent]
-    B --> C[Gemini LLM]
-    C --> D[ADK Tool Integration]
-
-    D --> E[Filesystem MCP]
-    D --> F[Shell MCP Server]
-    D --> G[GitHub MCP]
-
-    E --> H[Workspace Files]
-    F --> I[Commands and Tests]
-    G --> J[GitHub Operations]
-
-    H --> K[Tool Results]
-    I --> K
-    J --> K
-
-    K --> C
-    C --> L[Final Explanation]
+    A[User Message] --> B[Runner]
+    B --> C[Session Service]
+    C --> D[Agent Execution]
+    D --> E[LLM and Tools]
+    E --> F[Events]
+    F --> G[Session State]
+    G --> H[Next Interaction]
+    H --> B
 ```
-
-These diagrams are conceptual representations of the implemented integrations. Individual projects use different subsets of these capabilities.
 
 ---
 
@@ -535,45 +544,50 @@ These diagrams are conceptual representations of the implemented integrations. I
 | Technology | Purpose |
 |---|---|
 | Python | Primary programming language |
-| Google ADK | AI agent development and orchestration |
+| Google ADK | Agent development and orchestration |
 | Gemini | Large Language Model |
-| Google Search | Web information retrieval |
-| Tavily | Third-party web search |
-| LangChain | Third-party tool integration |
-| BuiltInCodeExecutor | Python code execution |
-| Pydantic | Structured data models and validation |
-| MCP | Standardized tool integration |
-| McpToolset | Connects MCP servers to ADK agents |
-| Node.js / npx | Runs the filesystem MCP server |
-| Filesystem MCP | Local file operations |
-| GitHub MCP | GitHub-related integrations |
-| python-dotenv | Environment variable management |
-| Git & GitHub | Version control |
+| Google Search | Search and retrieval |
+| Tavily | Web search |
+| LangChain | Tool integrations |
+| Pydantic | Structured data and validation |
+| MCP | External tool connectivity |
+| McpToolset | MCP integration with ADK |
+| Node.js | Local MCP server execution |
+| Filesystem MCP | Local workspace access |
+| GitHub MCP | GitHub tool integration |
+| Python datetime | Time handling |
+| Python zoneinfo | Timezone handling |
+| Git | Version control |
+| GitHub | Code hosting |
 
 ---
 
-# ⚙️ Getting Started
+# ⚙️ Installation
 
 ## Prerequisites
 
-Install the following before running the projects:
+Install the following:
 
-- Python version supported by your installed Google ADK release.
-- Git.
-- Node.js and npm (required for local filesystem MCP integration).
-- Google AI Studio API key.
-- Tavily API key for Tavily-based agents.
-- GitHub token for GitHub MCP integrations.
+- Python
+- Git
+- Node.js and npm
+- Google AI Studio API key
 
-Verify the installations:
+Some agents additionally require:
+
+- Tavily API key
+- GitHub Personal Access Token
+
+Verify your installation:
 
 ```bash
 python --version
 git --version
 node --version
 npm --version
-npx --version
 ```
+
+---
 
 ## 1. Clone the Repository
 
@@ -595,67 +609,84 @@ python -m venv .venv
 
 ## 4. Activate the Environment
 
-**Windows PowerShell**
+### Windows PowerShell
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-If PowerShell blocks script execution, use:
+If PowerShell blocks activation:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
 ```
 
-**Linux / macOS**
+### Linux / macOS
 
 ```bash
 source .venv/bin/activate
 ```
 
-## 5. Install Dependencies
+## 5. Install Google ADK
 
-Install Google ADK with MCP support:
+```bash
+pip install google-adk
+```
+
+For MCP projects:
 
 ```bash
 pip install "google-adk[mcp]"
 ```
 
-Install additional integrations:
+For Tavily integration:
 
 ```bash
-pip install -U langchain-tavily python-dotenv
+pip install -U langchain-tavily
 ```
 
-Some projects may require additional dependencies depending on their implementation.
+For environment variable management:
 
-## 6. Configure Environment Variables
+```bash
+pip install python-dotenv
+```
 
-Create the necessary `.env` files for the agents you intend to run.
+Install additional dependencies if required by a specific project.
 
-Example configuration:
+---
+
+# 🔑 Environment Configuration
+
+Create the appropriate `.env` file for the agent you want to run.
+
+### Google Gemini
 
 ```env
 GOOGLE_GENAI_USE_VERTEXAI=FALSE
-
 GOOGLE_API_KEY=your_google_api_key
+```
 
+### Tavily
+
+```env
 TAVILY_API_KEY=your_tavily_api_key
+```
 
+### GitHub MCP
+
+```env
 GITHUB_TOKEN=your_github_token
 ```
 
-For the coding agent, configure its own `.env` file inside `coding_agent/`:
+### Coding Agent
 
 ```env
 WORKSPACE_DIR=workspace
 GITHUB_PAT=your_github_personal_access_token
 ```
 
-`GITHUB_PAT` is optional for the coding agent. Without it, the agent can still use its local filesystem and shell integrations.
-
-The `mcp_agent` uses `GITHUB_TOKEN`, while `coding_agent` uses `GITHUB_PAT`.
+The environment variable names depend on the individual project's implementation.
 
 ### API Key Resources
 
@@ -663,40 +694,34 @@ The `mcp_agent` uses `GITHUB_TOKEN`, while `coding_agent` uses `GITHUB_PAT`.
 |---|---|
 | Google AI Studio | https://aistudio.google.com/apikey |
 | Tavily | https://tavily.com/ |
-| GitHub Personal Access Tokens | https://github.com/settings/tokens |
+| GitHub Tokens | https://github.com/settings/tokens |
 
-### Important Security Notes
-
-- Never upload `.env` files to GitHub.
-- Never hardcode API keys or tokens inside Python files.
-- Use only the minimum permissions required for your tokens.
-- Keep filesystem MCP access restricted to the intended workspace.
-- Review GitHub write operations and shell commands before approving them.
-- Keep credentials private.
+> 🔐 Never commit API keys, tokens, `.env` files, or credentials to GitHub.
 
 ---
 
 # ▶️ Running the Agents
 
-Run commands from the repository root after activating your virtual environment.
+Run commands from the repository root.
 
-## Option 1: Start ADK Web
+## Start the ADK Web Interface
 
 ```bash
 adk web
 ```
 
-Open the local ADK web interface shown in your terminal and select the agent you want to test.
+This launches the ADK developer interface for locally available agents.
 
-## Option 2: Run an Individual Agent
+## Run an Individual Agent
 
 ```bash
 adk run mayank_negi
 ```
 
-Other available agents:
+### Available Agents
 
 ```bash
+adk run mayank_negi
 adk run search_file
 adk run tavily_search_agent
 adk run world_clock_agent
@@ -707,100 +732,99 @@ adk run coding_agent
 adk run structured_output
 ```
 
-Make sure the required environment variables and dependencies are configured for the selected agent.
-
-**Important:** The coding agent has its own `.env` configuration. Its GitHub integration is optional, but its local filesystem and shell integrations require the relevant MCP dependencies and server files to be available.
+The `runner_chatbot_demo` and `session_runner_demo` folders are learning projects for programmatic execution and session handling. Follow their individual Python entry points as they are developed.
 
 ---
 
-# 📚 Key Learning Outcomes
+# 🧠 Concepts I'm Learning
 
-Through these implementations, I am exploring and practising:
-
-- Fundamentals of Agentic AI.
-- Google ADK architecture.
-- Gemini model integration.
-- Agent instructions and configurations.
-- Built-in ADK tools.
-- Custom Python function tools.
-- Third-party tool integration.
-- Web search and information retrieval.
-- Python code execution.
-- Multiple tool orchestration.
-- Model Context Protocol.
-- Local and remote MCP servers.
-- MCP transports: stdio and Streamable HTTP.
-- Filesystem and GitHub integrations.
-- Human approval workflows.
-- Structured outputs using Pydantic.
-- Schema-based data extraction.
-- Environment-based authentication.
+| Concept | Description |
+|---|---|
+| Agents | LLM-powered systems following instructions |
+| Tools | Functions and external capabilities available to agents |
+| Tool Calling | Agents deciding when and how to invoke tools |
+| Agent Orchestration | Coordinating multiple tools and agents |
+| MCP | Standard protocol for connecting tools and services |
+| Sessions | Managing conversation history and state |
+| Runners | Executing agents and managing interaction flows |
+| Events | Representing agent execution and responses |
+| Structured Output | Producing validated data from LLMs |
+| Human-in-the-Loop | Requiring human confirmation for sensitive actions |
 
 ---
 
-# 🔭 Future Improvements
+# 🔭 Future Roadmap
 
-This repository is an ongoing learning project. Areas I plan to explore further include:
+This repository is continuously evolving.
 
-- Implementing more advanced multi-agent systems.
-- Exploring agent delegation and coordination.
-- Adding session management and persistent memory.
-- Implementing MCP tool filtering and access controls.
-- Improving structured logging and error handling.
-- Adding automated agent evaluation and testing.
-- Exploring RAG-based agent applications.
-- Experimenting with additional MCP servers.
-- Exploring deployment options for ADK agents.
-- Building more practical Agentic AI applications.
+### Planned Explorations
+
+- [ ] Advanced multi-agent systems
+- [ ] Agent delegation
+- [ ] Sequential and parallel workflows
+- [ ] Session persistence
+- [ ] Memory and context management
+- [ ] More MCP integrations
+- [ ] RAG-powered agents
+- [ ] Agent evaluation
+- [ ] Observability and tracing
+- [ ] API integrations
+- [ ] Deployment with Docker
+- [ ] Deployment to Google Cloud
+- [ ] Production-oriented agent architectures
 
 ---
 
-# 📖 Learning Resources
+# 📚 Learning Resources
 
 | Resource | Link |
 |---|---|
 | Google ADK Documentation | https://google.github.io/adk-docs/ |
-| Google ADK Python | https://github.com/google/adk-python |
+| Google ADK Python Repository | https://github.com/google/adk-python |
 | Model Context Protocol | https://modelcontextprotocol.io/ |
 | MCP Servers | https://github.com/modelcontextprotocol/servers |
 | Google AI Studio | https://aistudio.google.com/ |
-| LangChain Documentation | https://python.langchain.com/docs/ |
+| LangChain | https://python.langchain.com/ |
 | Tavily Documentation | https://docs.tavily.com/ |
-| Pydantic Documentation | https://docs.pydantic.dev/ |
+| Pydantic | https://docs.pydantic.dev/ |
 
 ---
 
-# 🔐 Security
+# 🔒 Security Considerations
 
-This repository includes agents capable of interacting with external services, local files, and development commands.
+Some projects in this repository interact with local files, execute code, run commands, or access external services.
 
-Please follow these precautions:
-
-1. Keep API keys and personal access tokens out of source control.
-2. Use restricted filesystem workspaces.
-3. Apply least-privilege permissions to GitHub tokens.
-4. Review potentially destructive shell and GitHub operations.
-5. Avoid executing untrusted generated code in environments containing sensitive data.
+- Never expose API keys or tokens.
+- Keep `.env` files out of version control.
+- Restrict filesystem access to designated workspaces.
+- Use least-privilege GitHub tokens.
+- Review potentially destructive shell commands.
+- Use approval mechanisms for sensitive operations.
+- Do not run untrusted generated code in environments containing sensitive data.
 
 ---
 
 # 👨‍💻 About Me
 
-**Mayank Negi**
+## Mayank Negi
 
-MCA Graduate | Aspiring AI Engineer | Generative AI & Agentic AI Enthusiast
+**MCA Graduate | Aspiring AI Engineer | Generative AI & Agentic AI Enthusiast**
 
-I am interested in building practical AI applications and continuously improving my understanding of Python, Large Language Models, RAG systems, and Agentic AI.
+I am focused on building practical AI applications and developing my skills in Python, Generative AI, LLM applications, RAG, Agentic AI, and backend development.
 
-I enjoy learning by building projects, experimenting with tools, understanding agent architectures, and exploring how AI can solve real-world problems.
+I believe in learning by building, experimenting, understanding the underlying concepts, and continuously improving through hands-on projects.
 
-- **GitHub:** https://github.com/mayanknegi22
-- **Repository:** https://github.com/mayanknegi22/Google-adk
+### Connect With Me
+
+- GitHub: [@mayanknegi22](https://github.com/mayanknegi22)
+- Google ADK Projects: [Google-adk](https://github.com/mayanknegi22/Google-adk)
 
 ---
 
-<p align="center">
-  <b>Building • Learning • Experimenting</b>
-  <br />
-  Exploring the possibilities of Agentic AI with Google ADK.
-</p>
+<div align="center">
+
+### 🚀 Build. Experiment. Learn. Improve.
+
+**Exploring the future of Agentic AI, one project at a time.**
+
+</div>
